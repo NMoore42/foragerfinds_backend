@@ -81,6 +81,8 @@ mitch_post_one = Post.create(user: mitch, title: "Hey All", description: "Just g
 
 mitch_post_two = Post.create(user: mitch, title: "Puffball?", description: "Found a big white ball type thing.  Is this a giant puffball?")
 
+
+
 # Comments
 Comment.create(post: jodi_post_one, user: nick, comment_content: "Well, I am not sure MADE is correct.")
 Comment.create(post: nick_post_one, user: jodi, comment_content: "Nice...")
