@@ -275,3 +275,101 @@ Processing by UsersController#create as */*
 Completed 204 No Content in 14749ms (ActiveRecord: 2.2ms | Allocations: 63474)
 
 
+Started POST "/users" for ::1 at 2020-10-13 10:35:56 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Test Nick", "last_name"=>"Test Moore", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "user"=>{"first_name"=>"Test Nick", "last_name"=>"Test Moore", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (4.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 406 Not Acceptable in 28ms (Views: 1.6ms | ActiveRecord: 11.4ms | Allocations: 17521)
+
+
+Started POST "/users" for ::1 at 2020-10-13 10:37:01 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Test Nick", "last_name"=>"Test Moore", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "user"=>{"first_name"=>"Test Nick", "last_name"=>"Test Moore", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 16ms (Views: 0.6ms | ActiveRecord: 5.2ms | Allocations: 13463)
+
+
+Started POST "/users" for ::1 at 2020-10-13 10:41:19 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Test Nick", "last_name"=>"Test Moore", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "user"=>{"first_name"=>"Test Nick", "last_name"=>"Test Moore", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 406 Not Acceptable in 14ms (Views: 0.4ms | ActiveRecord: 4.7ms | Allocations: 12902)
+
+
+Started POST "/users" for ::1 at 2020-10-13 10:46:29 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Test Nick", "last_name"=>"Test Moore", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 406 Not Acceptable in 197ms (Views: 0.4ms | ActiveRecord: 5.4ms | Allocations: 20896)
+
+
+Started POST "/users" for ::1 at 2020-10-13 10:51:43 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Test Nick", "last_name"=>"Test Moore", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "user"=>{"first_name"=>"Test Nick", "last_name"=>"Test Moore", "birthday"=>"1987-02-05", "username"=>"TestMoore42", "password"=>"[FILTERED]", "email"=>"testnick@email.com", "bio"=>"This is a test through fetch"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testnick@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestMoore42"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "username", "password_digest", "email", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Test Nick"], ["last_name", "Test Moore"], ["birthday", "1987-02-05"], ["username", "TestMoore42"], ["password_digest", "$2a$12$95VEqNlCgFChjPZxJcQAxeFbepOQvY09cI/2xNi0doGt4f/j6pyB."], ["email", "testnick@email.com"], ["bio", "This is a test through fetch"], ["created_at", "2020-10-13 15:51:43.329438"], ["updated_at", "2020-10-13 15:51:43.329438"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "testnick@email.com"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "TestMoore42"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.24ms)
+Completed 201 Created in 222ms (Views: 6.7ms | ActiveRecord: 12.1ms | Allocations: 19899)
+
+

@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  validates :first_name, :last_name, :birthday, :username, :password, :email, :bio, presence: true
+  validates :first_name, :last_name, :birthday, :username, :email, :bio, presence: true
   validates :email, :username, uniqueness: true
 end
